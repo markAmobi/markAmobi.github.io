@@ -1,0 +1,34 @@
+body {
+  background-color:#FAE8DE;
+  font-family: 'IM Fell Great Primer', serif;
+}
+
+#head {
+  padding:30px 50% 10px 50%;
+  width:100%;
+  height:100px;
+  font-weight:bold;
+  background-color: #FAC1A5;
+}
+
+#foot {
+    margin-top:100%;
+    width:100%;
+    background-color: #FAC1A5;
+    font-family: verdana;
+    color: red;
+}
+
+a {
+
+  text-decoration:none;
+}
+#navbar {
+width:700px;
+}
+
+.nav {
+  margin:10px 20px 10px 20px;
+  display:inline-block;
+}
+
