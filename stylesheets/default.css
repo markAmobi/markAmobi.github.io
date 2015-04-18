@@ -2,6 +2,9 @@ body {
   background-color:#EBEFF2;
 }
 
+#cc {
+
+}
 #navbar {
   color:white;
   width:100%;
@@ -18,8 +21,8 @@ body {
 
 
 #head {
-  margin-left:150px;
-}
+  text-align:center;
+  }
 
 .nav {
   display:inline;
