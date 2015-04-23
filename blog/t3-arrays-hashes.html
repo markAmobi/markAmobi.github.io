@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+  <title>Arrays and Hashes</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+</head>
+
+<body>
+
+       <ul id="navbar">
+        <li class="nav"> <a href="../index.html">HOME</a> </li>
+        <li class="nav"> <a href="index.html">BLOG</a> </li>
+        <li class="nav"> <a href="../comingsoon.html">PROJECTS</a> </li>
+        <li class="nav"> <a href="../comingsoon.html">ABOUT ME</a> </li>
+        <li class="nav"> <a href="../comingsoon.html">CONTACT</a></li>
+      </ul>
+
+  <main>
+  <div id="head">
+  <h1 > Arrays and Hashes </h1>
+
+  <h4>April 22, 2015</h4>
+  </div>
+
+  <section>
+  <h3>Arrays</h3>
+    <p>
+    An array can be thought of as a list of items. It is simply a collection of items. An array can be used to store different types of information in a certain order. For instance, say you wanted to keep a list of famous mathematicans. You can store this list in an array. Depending on what programming language you are using, the representation will be slightly different. <span>NOTE: Any programming syntax you see here will probably be ruby language.</span> Back to our mathematicians, lets say we keep the names of mathematicians in a list.
+    We would have something like: <br>
+    <span>mathguys = ["Gauss", "Euler", "Galois", "Pascal"]</span> <br>
+    In oder to retrieve a famous mathematician from the list, we need to know the position of the position of the mathematican. One important thing to mention is that in computer science, counting begins at 0. So the first item would be the item at position 0, 2nd will be at position 1, and so on. In ruby, to retrieve the first mathematician on this list, we would do : <br>
+    mathguys[0]
+    <br>
+    This refers to Gauss.
+  </p>
+  <p>
+    What's the point of storing these items? Well, you can probably think of several reasons why you would need to store items in a list. For example, we might want to sort these great mathematicians in order of greatness(this can be done as long as you provide a well defined method for sorting by greatness). Sorting is a very important method in computer science. Most programming languages have inbuilt methods to sort arrays. In Ruby, we could simply do : mathguys.sort <br>
+    and this would rearrange the mathematicans in alphabetical order. Apart from sorting, there are lots of other things you can do with arrays. Visit <a href="http://ruby-doc.org/core-2.0.0/Array.html">Ruby docs</a> if you're curious to see some other things we can do with an array.
+    </p>
+  </section>
+  <section>
+    <h3> Hashes</h3>
+    <p>
+      An Array is not the only type of collection item available. Another important collection item is the <strong>Hash</strong>. <br>
+      A Hash is sort of like an array, but it's quite different. Like an array, a Hash can be used to store and retrieve values, but the process is a bit different. A hash stores items as key-value pairs. A key can be thought of as the index. A value is the actual item you want to get. For example, say we wanted to store not only the last names, but also the first names of our mathematicians. In Ruby we could store them in a hash like this: <br>
+      mathguys ={"Gauss"=>"Carl", "Euler"=>"Leonhard", "Galois"=>"Evariste" " "Pascal"=>"Blaise"} <br>
+      If we want to know the First name(value) of a mathematician, we need to use the index(key) to retrieve it. For instance, If you wanted to know the Euler's first name, we would do: <br>
+      mathguys["Euler"] <br>
+      This tells Ruby to get the value whose key is "Euler". This would return "Leonhard".
+          </p>
+
+        <p>
+          Just like Arrays, Hashes are very important in computer programming and there are several things which we can do with hashes. It is important to understand how Arrays and Hashes work because being able to keep things in a collection is very useful. To learn more about the different things we can do with hashes, feel free to look at the <a href="http://ruby-doc.org/core-2.2.0/Hash.html">Ruby docs </a> for hashes.
+        </p>
+  </section>
+</main>
+</body>
+</html>
