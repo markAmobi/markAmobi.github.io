@@ -46,6 +46,7 @@ div div a {
 
 
 footer {
+  display:none; /*Figure out how to correctly display this footer.*/
   font-family: 'IM Fell Great Primer', 'Playball', cursive;
   position:absolute;
   font-size:20px;

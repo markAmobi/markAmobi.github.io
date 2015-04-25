@@ -1,0 +1,46 @@
+body {
+    font-family:Arial
+}
+
+header {
+
+    padding:20px;
+    margin:20px;
+     border:5px solid gray;
+
+}
+
+div.left {
+
+    padding:5%;
+    margin:4%;
+    width:29%;
+    float:left;
+    border:5px solid gray;
+}
+
+div.right {
+
+    padding:5%;
+    margin:4%;
+    width:29%;
+    float:right;
+    padding-bottom:12.5%;
+     border:5px solid gray;
+}
+
+footer {
+    clear:both;
+    background-color:gray;
+    padding:5%;
+    margin:5%
+}
+
+img {
+    height:40px;
+    width:40px;
+}
+
+
+h1, h2 {
+    font-family:Georgia;
