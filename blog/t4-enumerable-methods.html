@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+  <title>Enumerable map method in Ruby</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+</head>
+
+<body>
+
+       <ul id="navbar">
+        <li class="nav"> <a href="../index.html">HOME</a> </li>
+        <li class="nav"> <a href="index.html">BLOG</a> </li>
+        <li class="nav"> <a href="../comingsoon.html">PROJECTS</a> </li>
+        <li class="nav"> <a href="../comingsoon.html">ABOUT ME</a> </li>
+        <li class="nav"> <a href="../comingsoon.html">CONTACT</a></li>
+      </ul>
+
+  <main>
+  <div id="head">
+  <h1 > Enumerable #map </h1>
+
+  <h4>05/03/2015</h4>
+  </div>
+
+
+  <p>
+    Ruby is all about simplicity. Ruby provides several methods to simplify things you might want to do while programming. One very import method is map method for Enumerables.
+  </p>
+
+  <p>
+    Any descendant of enumerable class can have access to the map method. Let's focus on arrays for simplicity. Say you wanted to perform some computation on each element in an array. For example, say we had an array of integers nums = [1,2,3,4,5,6,7,8,9], and you wanted to obtain another array that contains the squares of these integers. You can easily do this by iterating through nums, squaring each number and appending the answer to another array. Not terribly hard.
+  </p>
+
+  <p>
+    With the map mehod, you can perform the above mentioned task easily. You would simply write something like this: <br>
+    nums_squares = nums.map {|num| num*num} <br>
+
+    The map methods works like a function in mathematics. If you have a set of numbers and you apply a function to the set, you get a set of numbers which are the images of the input. <br>
+    The map method in Ruby works in the exact same way. What you specify in the code block is analogous to the definition of the function. <br>
+    So basically, the map method performs an operation to each item in the given enumerable and returns an array with the resulting outputs.
+  </p>
+
+    <p>
+    The map method is one of several methods provided by Ruby in other to make life simple. In order to see some more useful methods, you can click <a href = "http://ruby-doc.org/core-2.2.1/Enumerable.html">here</a> to visit the Ruby docs on Enumerables and the methods associated with it.
+  </p>
+</main>
+</body>
+</html>
