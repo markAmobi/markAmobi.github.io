@@ -1,9 +1,41 @@
 main {
-height:100%;
-width:600px;
+
+background-color:white;
 margin:auto;
+margin-top:50px;
+width:700px;
+padding:20px;
+border-radius:7px;
 }
 
 p a {
   color:blue;
+}
+
+
+#pageChange {
+margin:auto;
+width:400px;
+margin-top:20px;
+background-color:none;
+list-style: none;
+}
+
+#pageChange li {
+  display:inline;
+}
+
+#pageChange a {
+  display:inline-block;
+  background-color:#2B2B49;
+  color:white;
+  width:100px;
+  height:30px;
+  text-align:center;
+}
+
+#previous {
+}
+#next {
+  margin-left:70px;
 }
