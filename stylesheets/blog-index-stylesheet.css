@@ -1,33 +1,56 @@
 .blogContainer {
 
-background-color: #DEEDA8;
+/*background-color: #DEEDA8;*/
+background-color:white;
 margin: 0 auto;
 width:700px;
+padding-top:0.5px;
+padding-bottom:1px;
+border-radius:7px;
 }
 
 .blogContainer > div{
+
   margin:10px;
+  margin-top:15px;
   text-align:center;
-  background-color: #FA9BA4;
+  background-color: #B4C3E0;
   height:200px;
   padding:20px;
   font-size:17px;
-
+  border-radius:7px;
 }
 
-/*.blogContainer div a {
-  color:blue;
+.blogContainer div a {
+  color:white;
   font-weight:bold;
   text-decoration:none;
-}*/
+}
 
-.readmore {
+.readmore{
   font-size:20px;
-  background-color:#B6C6F0;
+  color:white;
+  background-color:#004EA1;
   position:relative;
   width:100px;
   height:20px;
   padding:15px;
-  left:520px;
-  top:20px;
+  left:265px;
+  top:30px;
+  border-radius:7px;
+  border-top:2px solid #8387A3;
+  border-right:2px solid #495073;
+  border-bottom:2px solid #495073;
+  border-left:2px solid #8387A3;
+}
+
+.readmore:hover {
+
+
+    color: #272F59;
+  background-color:#707591;
+  border-bottom:2px solid #8387A3;
+  border-left:2px solid #495073;
+  border-top:2px solid #495073;
+  border-right:2px solid #8387A3;
 }
