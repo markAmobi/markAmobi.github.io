@@ -1,6 +1,33 @@
-.blogs {
-  margin-top:50px;
-  width: 300px;
-  height: 30px;
+.blogContainer {
 
+background-color: #DEEDA8;
+margin: 0 auto;
+width:700px;
+}
+
+.blogContainer > div{
+  margin:10px;
+  text-align:center;
+  background-color: #FA9BA4;
+  height:200px;
+  padding:20px;
+  font-size:17px;
+
+}
+
+/*.blogContainer div a {
+  color:blue;
+  font-weight:bold;
+  text-decoration:none;
+}*/
+
+.readmore {
+  font-size:20px;
+  background-color:#B6C6F0;
+  position:relative;
+  width:100px;
+  height:20px;
+  padding:15px;
+  left:520px;
+  top:20px;
 }
