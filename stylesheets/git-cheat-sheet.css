@@ -44,3 +44,34 @@ img {
 
 h1, h2 {
     font-family:Georgia;
+}
+
+
+
+#pageChange {
+clear:both;
+margin:auto;
+width:400px;
+margin-top:20px;
+background-color:none;
+list-style: none;
+}
+
+#pageChange li {
+  display:inline;
+}
+
+#pageChange a {
+  display:inline-block;
+  background-color:#2B2B49;
+  color:white;
+  width:100px;
+  height:30px;
+  text-align:center;
+}
+
+#previous {
+}
+#next {
+  margin-left:170px;
+}
