@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-  <title>Your page title here</title>
+  <title>OOP Concepts</title>
   <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
   <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
@@ -18,27 +18,60 @@
 
   <main>
   <div id="head">
-  <h1 > BLOG-Title </h1>
+  <h1 > Classes and Modules </h1>
 
-  <h4>Today's Date</h4>
+  <h4>May 17, 2015.</h4>
   </div>
 
 
   <p>
-    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+    In my last blog post, I talked a bit about <a href = "t5-ruby-classes.html">Ruby Classes</a> and how important Objected Oriented Programming is. I also mentioned that Object Oriented Programming is useful for grouping items with similar behavior together in one class. The importance of OOP cannot be overstated. As a result of this, Ruby provides another construct which can also be useful in Object Oriented design. This construct is called <strong> Module </strong>
   </p>
 
   <p>
-    "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"
+   In Ruby, Modules are similar to classes in so many ways. Just like classes, Modules can be used to group a lot of similar methods together. In order to create a Module, we use the keyword "module". For instance, say we wanted to create a module called Arithmetic. We would do: <br>
+   <br>
+   module Arithmetic<br><br>
+   end
+   <br><br>
+
+   <br>
+
+   Obeserve that this is similar to creating a class, except that we use the keyword module instead of class. <br>
+   The use of modules is slightly different from that of classes. One major difference between modules and classes is that you can't have instances of modules. In order to use the functionality of a module, you would have to mix it into a class. This can be done by either using the include keyword, or the prepend keyword.
+
   </p>
 
   <p>
-    "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"
+    In order to explain how a module can be helpful, consider the illustration below. Say we wanted to have a class called Subjects that lets you have a list of subjects, display all subjects, add and delete subjects. We can do something like the following: <br><br>
+    <img src="../imgs/t6-blog/no_module_subject.png" height="350px" width="500px">
+    <br><br>
+
+    Doesn't look terrible to code. Pretty simple. Now say, we wanted to create a Students class that lets you have a list of students, display all students, add and delete students. We can do the following: <br><br>
+    <img src="../imgs/t6-blog/no_module_student.png" height="350px" width="500px">
+    <br><br>
+
+    The above classes are too bad. The methods are pretty straight forward. But one thing we notice is that this code is not DRY(Don't Repeat Yourself). In order words, there is a significant amount of redundant repetition. Notice that the 2 classes have very similar methods, in fact, almost identical. The methods are list_all, delete, and add. This is where the idea of modules can become useful. When we observe such similarities among methods from different classes, it's kind of a trigger to start thinking about modules. We can define a module that has these methods and simply mix in the module to the classes. The module will look like:
+    <br><br>
+    <img src="../imgs/t6-blog/module.png" height="300px" width="500px">
+    <br><br>
+    And then, After re-writing the classes, they would look like:
+    <br><br>
+    <img src="../imgs/t6-blog/module_subject_class.png" height="300px" width="500px">
+    <br><br>
   </p>
 
     <p>
-    "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"
+      Notice that we've gotten rid of some redundancy. In fact, there is a beautiful side effect. Say Bill Gates wanted to define a class called "Cars" which can be used to keep track of all the cars he has. He would probably need methods like list_all, add, and delete to keep track of his cars. He wouldn't need to re-write those methods. He can simply mix the Listlike module into his program so he can have access to those methods without having to re-write them so he use him time more productively.
+  </p>
+
+  <p>
+    Understanding the concepts of modular design is very useful in OOP. Ruby makes it easier by providing easy to use classes, and modules which can help you to make your code more DRY.
   </p>
 </main>
+<ul id="pageChange">
+<li><a href= "c5-feedback.html" id = "previous">Previous</a></li>  <li><a href="t6-oop-concepts.html" id = "next">Next</a></li>
+</ul>
+
 </body>
 </html>
