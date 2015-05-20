@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+  <title>Ruby vs JS</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+</head>
+
+<body>
+
+       <ul id="navbar">
+        <li class="nav"> <a href="../index.html">HOME</a> </li>
+        <li class="nav"> <a href="index.html">BLOG</a> </li>
+        <li class="nav"> <a href="../comingsoon.html">PROJECTS</a> </li>
+        <li class="nav"> <a href="../comingsoon.html">ABOUT ME</a> </li>
+        <li class="nav"> <a href="../comingsoon.html">CONTACT</a></li>
+      </ul>
+
+  <main>
+  <div id="head">
+  <h1 > Comparing Ruby and Javascript </h1>
+
+  <h4>May 19, 2015. </h4>
+  </div>
+
+
+  <p>
+    This week, we changed gears and started learning Javascript(JS). JS is the language of the web. It is built into all major web browsers and can be used to make websites interactive. In this post, I will be comparing of few features of Javascript with the Features in Ruby. I will focus on the data types in Javascript. In Ruby, almost everything is regarded as an object. Ruby revolves around objects. But in Javascript, not everything is an objects.
+  </p>
+
+  <p>
+    <h3>Numeric values </h3>
+      In Ruby, numbers are objects. All numbers are either a float (like 3.14) of an integer (like 314). All numbers descend from the <strong>Numeric</strong> class. The Numeric class has 2 subclasses from which floats and Integers descend.
+
+  <br>
+      In JS, all numeric values are number data types. There is no distinction between floats and integers.
+      <br>
+      To perform arithmetic operations in Ruby, we use the methods. For instance, 2 + 2. In Ruby, "+" is a method for numeric objects. In fact, we can write expression as 2.+(2) and it still means the same thing. This is because numbers are objects in Ruby, and objects have methods they respond to. However in Javascript, the "+" in 2 + 2 is merely a binary operator.
+  </p>
+
+  <p>
+    <h3> Strings</h3>
+    In both JavaScript and Ruby, strings are represented the same way. Either using single quotes, or by using double quotes. One interesting difference between JS and Ruby is the automatic type conversion in JS. Consider the expression <br>
+    "6" + 2
+    <br>
+    The "+" works to concatenate strings in both Ruby and JS. If you do this in Ruby, you will the error saying, "TypeError: no implicit conversion of Fixnum into String". This is because 2 is not a String. But if try to evaluate the same thing in JS, it evaluates to "51". This is because JS does some implicit type conversion even when you give it the wrong operands. It follows some set of rule to do the conversions. Sometimes it gives you what you want. Sometimes it doesn't. So you just have to be careful when doing things like that.
+  </p>
+
+  <p>
+    Based on what I have seen so far, I think Ruby is more approachable than JavaScript. Some things in Ruby are easier to handle than JS. This post is by no means an elaborate comparison between the two languages. As at time of writing this post, I just started learning JS. So with time, I will become more familiar with it and it would become easier to handle.
+  </p>
+</main>
+
+<ul id="pageChange">
+<li><a href= "t6-oop-concepts.html" id = "previous">Previous</a></li>  <li><a href="t7-JavaScript.html" id = "next">Next</a></li>
+</ul>
+
+
+</body>
+</html>
