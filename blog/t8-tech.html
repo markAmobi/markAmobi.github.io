@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<head>
+  <title>Recursion</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+</head>
+
+<body>
+
+       <ul id="navbar">
+        <li class="nav"> <a href="../index.html">HOME</a> </li>
+        <li class="nav"> <a href="index.html">BLOG</a> </li>
+        <li class="nav"> <a href="../comingsoon.html">PROJECTS</a> </li>
+        <li class="nav"> <a href="../comingsoon.html">ABOUT ME</a> </li>
+        <li class="nav"> <a href="../comingsoon.html">CONTACT</a></li>
+      </ul>
+
+  <main>
+  <div id="head">
+  <h1 > To Understand Recursion, You Must First Understand Recursion.  </h1>
+
+  <h4>May 27, 2015. </h4>
+  </div>
+
+
+  <p>
+    Recursion is a programming technique whereby a method calls itself. It turns out that this is a very useful technique even though it may seem counter-intuitive at first. How can a method call itself? Does this mean that the call to itself also calls it self? And so on...
+    This is exactly correct.
+  </p>
+
+  <p>
+    To understand the concept better, let's look at a basic example. (NOTE: The function/method syntax will be in Ruby, but this concept applies to other programming language.) <br>
+    Suppose you were given the task to find the sum of all the numbers from 1 to 1000. How would you do this? <br>
+    If you're familiar with Ruby, you know that you can take advantage of Ruby's simplicity and simply use this:
+   <pre> <code>
+      (1..1000).reduce(:+)
+    </code></pre>
+    <br>That's exactly what's I would do. But what if you weren't exposed to Ruby's beautiful simplicity? Assume you don't know much of the built-in functions in Ruby. <br>
+    There are 2 ways to think about this problem. Firstly, we can think of it by starting from the beginning and keeping a running sum. A method to do this would look like:
+    <pre><code>
+      def sum_up_to(n)
+        sum = 0
+        (1..n).each{|num| sum += num}
+        return sum
+      end
+    </code></pre>
+
+  </p>
+
+  <p>
+    This basically says to start with a sum of 0, and then for each number from 1 to n, add the number to the sum. <code>sum</code> is like an accumulator. I think the idea above is probably how most people would approach the problem. By building up to the answer. <br><br>
+    Another approach to this problem would be to think recursively. By creating a method that depends on itself. Using the fact that we know how to add 2 numbers, we can think of the problem as follows: If I can add up all the numbers from 1 to 999, the I should be able to add up all the numbers from 1 to 1000 by simply adding 1000 to that sum. This would look something like: <br> sum_up_to(999) + 1000<br>
+    But we still have the same problem. You have to add up all the numbers from 1 to 999. Well, If you can add up the numbers from 1 to 998, the this should be doable as well. An so on... This is where the power of recursion manifests. The recursive method to do this can be written as:
+    <pre><code>
+      def sum_up_to(n)
+        n==1 ? 1: (sum_up_to(n-1) + n)
+      end
+    </code></pre>
+
+    The method says that to sum up to n, we check to see if n = 1. If n = 1, then the sum is 1. Otherwise, to sum from 1 to n, we can first find the sum from 1 to n-1 and then add n to it.
+    Let us look at some more detail of what is happening internally. Say we called this function with an argument of 5 like this: sum_up_to(5). This is what happens.
+    <pre><code>
+      sum_up_to(5) = sum_up_to(4) + 5
+                   = sum_up_to(3) + 4 + 5
+                   = sum_up_to(2) + 3 + 4 + 5
+                   = sum_up_to(1) + 2 + 3 + 4 + 5
+                   = 1 + 2 + 3 + 4 + 5
+                   = 15
+    </code></pre>
+    At each step, the argument to the function <code> sum_up_to</code> decreases by 1 until the argument becomes 1.
+    <!-- You might be wondering how the expression <code> sum_up_to(n-1) </code> works. The computer handles this internally and does all the hardwork.
+ -->
+  </p>
+
+    <p>
+      <h4> Conclusion</h4>
+      Recursion is a very interesting programming concept. If you can break down a problem into smaller instances of the same problem, then the problem could be a good candidate for recursion. If you can get the logic of a problem to be recursive, you can write the recursive method and trust the computer to do all the hard internal work(assuming your logic is correct).
+  </p>
+</main>
+
+<ul id="pageChange">
+<li><a href= "c7-values.html" id = "previous">Previous</a></li>  <li><a href="t1-git-blog.html" id = "next">Next</a></li>
+</ul>
+
+</body>
+</html>
