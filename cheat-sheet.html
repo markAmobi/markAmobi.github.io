@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<Head>
+  <title>CheatSheet</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="cheat-sheet.css">
+</head>
+
+<main>
+  <h1>CSS Positioning CheatSheet</h1>
+  <h2>The Box Model</h2>
+
+
+  <section>
+    <p>
+      All HTML elements can be considered as boxes. In CSS, the term "box model" is used when talking about design and layout.
+
+      The CSS box model is essentially a box that wraps around HTML elements, and it consists of: margins, borders, padding, and the actual content.
+
+      The box model allows us to add a border around elements, and to define space between elements.
+
+      The image below illustrates the box model:</p>
+      <img src = "http://www.w3schools.com/css/box-model.gif"/>
+      <h3> Explanations of Parts</h3>
+      <p>
+        <ul class="explanations">
+          <li>Content - The content of the box, where text and images appear</li>
+          <li>Padding - Clears an area around the content. The padding is transparent</li>
+          <li>Border - A border that goes around the padding and content</li>
+          <li>Margin - Clears an area outside the border. The margin is transparent</li>
+          <li> Total element width = width + left padding + right padding + left border + right border + left margin + right margin</li>
+          <li>Total element height = height + top padding + bottom padding + top border + bottom border + top margin + bottom margin</li>
+        </ul>
+
+
+      </p>
+    </section>
+    <section>
+     <h2> Display Property</h2>
+     <p>
+       <ul class="explanations">
+         <li><strong>Inline</strong> - An inline element will accept margin and padding, but the element still sits inline as you might expect. Margin and padding will only push other elements horizontally away, not vertically.
+          <strong>An inline element will not accept height and width. It will just ignore it.</strong></li>  <img src = "https://css-tricks.com/wp-content/uploads/2011/09/inlinepadding.png"/>
+          <li><strong>Block</strong> - A number of elements are set to block by the browser UA stylesheet. They are usually container elements, like <code>&lt;div&gt;</code>, <code>&lt;section&gt;</code>, and <code>&lt;ul&gt;</code>. Also text "blocks" like <code>&lt;p&gt;</code> and <code>&lt;h1></code>. Block level elements do not sit inline but break past them. By default (without setting a width) they take up as much horizontal space as they can. </li><img src="https://css-tricks.com/wp-content/uploads/2011/09/block.png"/>
+          <li><strong>Inline-block</strong> An element set to inline-block is very similar to inline in that it will set inline with the natural flow of text (on the "baseline"). The difference is that you are able to set a width and height which will be respected.</li><img src="https://css-tricks.com/wp-content/uploads/2011/09/inline-block.png"/>
+          <li><strong>None</strong> - Totally removes the element from the page. Note that while the element is still in the DOM, it is removed visually and any other conceivable way (you can't tab to it or its children, it is ignored by screen readers, etc).</li>
+        </ul>
+      </p>
+      <h2>Position Property</h2>
+      <p>
+        The position value in CSS deals with layout and manipulating elements to be in your desired visual place. There are only the five values shown above, and really only three since static and inherit are fairly rarely needed for this property.
+        <ul class="explanations">
+          <li><strong>Static</strong> Every element is static positioned by default. The element resides in the normal page flow. left/right/top/bottom/z-index have no effect on a static positioned element. There is rarely a need to set this value unless the element has been set with another matching selector to a different value and you need to set it back. </li>
+          <li><strong>Relative</strong> Element's original position (as if it were static) remains in the flow of the document. But now left/right/top/bottom/z-index do work. The positional properties "nudge" the element from the original position in that direction.</li><img src="https://css-tricks.com/wp-content/uploads/2012/03/relativeposition.png"/>
+          <li><strong>Absolute</strong> Element is removed from the flow of the document (other elements will behave as if it's not even there). All the other positional properties work on it. Essentially you are able to declare the exact position you want the element to appear.
+            <br>
+            Note that 1) without a wset, the element will stretch only as wide as the content it contains and 2) you can set, for instance, both a left and right value and the element will stretch to touch both points. So you can fill a screen by setting top: 0; left: 0; bottom: 0; right: 0;
+          </li>
+          <img src="https://css-tricks.com/wp-content/uploads/2012/03/positionabsolute.png"/>
+          <br>
+          <li><strong>Fixed</strong> Element is removed from the flow of the document like absolute positioned elements. In fact they behave almost the same, only fixed positioned elements are always relative to the document, not any particular parent, and are unaffected by scrolling. It's usually used to provide a persistant visual element, like navigation bar that is always visible.</li>
+          <br>
+          <li><strong>Inherit</strong> The position value doesn't cascade, so this can be used to specifically force it to, and inherit the positioning value from its parent.</li></ul>
+        </p>
+        <h3>Absolute Positioning Inside Relative Positioning</h3>
+        <p>
+          <br>
+          A page element with relative positioning gives you the control to absolutely position children elements inside of it.
+        </p>
+        <img src="https://css-tricks.com/wp-content/csstricks-uploads/absolute-inside-relative.png"/>
+        <br>
+        <p>
+          The relative positioning on the parent is the big deal here. Look what would happen if you forgot that:</p>
+          <img src="https://css-tricks.com/wp-content/csstricks-uploads/absolute-inside-relative2.png"/>
+          <br>
+          <p>
+            What is happening is the absolutely positioned elements are positioning themselves in relation to the body element instead of their direct parent. So if the browser window grows, that one in the bottom left is going to stick with the browser window, not hang back inside like his well behaved brother from the first image.
+          </p>
+          <h2> Float Property</h2>
+          <p>Aside from the simple example of wrapping text around images, floats can be used to create entire web layouts.
+            <br>
+            This same layout could be accomplished using relative positioning on container and absolute positioning on the avatar as well. In doing it this way, the text would be unaffected by the avatar and not be able to reflow on a size change.</p>
+            <img src="https://css-tricks.com/wp-content/csstricks-uploads/web-layout.png"/>
+          </p>
+          <h4> Clearing the Float</h4>
+          <p> Float's sister property is clear. An element that has the clear property set on it will not move up adjacent to the float like the float desires, but will move itself down past the float.</p>
+          <img src="https://css-tricks.com/wp-content/csstricks-uploads/clearedfooter.png"/>
+          <p>Clear has four valid values as well. Both is most commonly used, which clears floats coming from either direction. Left and Right can be used to only clear the float from one direction respectively. None is the default, which is typically unnecessary unless removing a clear value from a cascade.</p>
+
+        </section>
+
+
+        <footer>
+          <h5>References</h5>
+          <ul>      <li><a href="http://www.w3schools.com/css/">W3Schools </a></li>
+            <li><a href="https://css-tricks.com/almanac/"> CSS Tricks</a></li>
+          </ul>
+        </footer>
+
+      </main>
+
+      </html>
