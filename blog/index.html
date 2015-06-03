@@ -2,36 +2,82 @@
 <head>
   <title>BLOG</title>
   <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <meta charset="UTF-8">
+  <!-- Bootstrap 3 is mobile-first. Use this to ensure proper rendering and touch zooming -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
   <link rel="stylesheet" type="text/css" href="../stylesheets/blog-index-stylesheet.css">
 </head>
 <body>
 
-        <ul id="navbar">
-        <li class="nav"> <a href="../index.html">HOME</a> </li>
-        <li class="nav"> <a href="index.html">BLOG</a> </li>
-        <li class="nav"> <a href="../comingsoon.html">PROJECTS</a> </li>
-        <li class="nav"> <a href="../comingsoon.html">ABOUT ME</a> </li>
-        <li class="nav"> <a href="../comingsoon.html">CONTACT</a></li>
+
+
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <!-- <a class="navbar-brand" href="#">WebSiteName</a> -->
+    </div>
+
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="../index.html">HOME</a></li>
+        <li class="active"> <a href="index.html">BLOG</a> </li>
+        <li> <a href="#">PROJECTS</a> </li>
+        <li> <a href="#">ABOUT ME</a> </li>
+        <li> <a href="#">CONTACT</a></li>
       </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span><img class = "logos" src="../imgs/githublogo.png"/></span> Github</a></li>
+        <li><a href="#"><span><img class = "logos" src="../imgs/twitterlogo.png"/></span> Twitter</a></li>
+        <li><a href="#"><span><img class = "logos" src="../imgs/facebooklogo.png"/></span> Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-      <div id="head"><h1>MY BLOG</h1></div>
 
-      <div class="blogContainer"  >
+
+
+      <div class="jumbotron">
+          <div class= "container" style="text-align:center;">
+            <h1>MARK - BLOGGING</h1>
+          </div>
+        </div>
+
+      <div class="container"  >
+        <div class="row">
+          <div class="col-sm-2"></div>
+          <div class="col-sm-8">
           <div>
             <h3>VERSION CONTROL, GIT AND GITHUB</h3>
             <p>
               As the name implies, version control is simply a system of controlling versions of a file. It is simply a way to store memories of different changes to a file so that sometime in the future, these memories can be revisited(or maybe re-lived).
             </p>
-            <a class="readmore" href="t1-git-blog.html">Read More</a>
+            <p><a class="btn btn-default" href="t1-git-blog.html" role="button">Read More &raquo;</a></p>
           </div>
 
           <div>
             <h3>KITCHEN MINDSET</h3>
             <p>
-              Watching the <a style="color:blue;"href="https://vimeo.com/85001014" style="text-decoration:none;">video</a> by Shereef, and listening to him answer some questions was very helpful. Some of the questions asked were things I was thinking about and Shereef had good response to a lot of them.
+              Watching the <a href="https://vimeo.com/85001014">video</a> by Shereef, and listening to him answer some questions was very helpful. Some of the questions asked were things I was thinking about and Shereef had good response to a lot of them.
             </p>
-            <a href="c1-chefs-kitchen.html" class="readmore">Read More</a>
+            <p><a class="btn btn-default" href="c1-chefs-kitchen.html" role="button">Read More &raquo;</a></p>
           </div>
 
           <div>
@@ -39,7 +85,7 @@
             <P>
               A lot of HTML objects can be thought of as boxes. whenever you create an HTML tag, you're essentially creating a box and trapping the item inside the box. Understanding the box model will help you a lot when you get frustrated trying to move your elements around.
             </p>
-            <a href="t2-css-design.html" class="readmore">Read More</a>
+            <p><a class="btn btn-default" href="t2-css-design.html" role="button">Read More &raquo;</a></p>
           </div>
 
           <div>
@@ -47,7 +93,7 @@
             <p>
               An array can be thought of as a list of items. It is simply a collection of items. An array can be used to store different types of information in a certain order. For instance, say you wanted to keep a list of famous mathematicans. You can store this list in an array.
             </p>
-            <a href="t3-arrays-hashes.html" class="readmore">Read More</a>
+            <p><a class="btn btn-default" href="t3-arrays-hashes.html" role="button">Read More &raquo;</a></p>
           </div>
           <div>
             <h3>Git CHEAT SHEET</h3>
@@ -56,7 +102,7 @@
             This cheat sheet summarizes commonly used Git command line
             instructions for quick reference.
           </p>
-          <a href="git-cheat-sheet.html" class="readmore">Read More </a>
+          <p><a class="btn btn-default" href="git-cheat-sheet.html" role="button">Read More &raquo;</a></p>
           </div>
 
           <div>
@@ -64,7 +110,7 @@
             <p>
               Ruby is all about simplicity. Ruby provides several methods to simplify things you might want to do while programming. One very import method is map method for Enumerables. Any descendant of enumerable class can have access to the map method.
           </p>
-          <a href="t4-enumerable-methods.html" class="readmore">Read More </a>
+          <p><a class="btn btn-default" href="t4-enumerable-methods.html" role="button">Read More &raquo;</a></p>
           </div>
 
           <div>
@@ -72,7 +118,7 @@
             <p>
               Object Oriented programming(OOP) is a very important programming paradigm. This type of programming involves grouping things with similar behavior together into what is know as a "Class". There are several programming languages which have OOP capabilities.
             </p>
-            <a href="t5-ruby-classes.html"  class="readmore">Read More </a>
+            <p><a class="btn btn-default" href="t5-ruby-classes.html" role="button">Read More &raquo;</a></p>
           </div>
 
           <div>
@@ -80,7 +126,7 @@
            <p>
             From the beginning of Devbootcamp program, I've always been skeptical of doing pairing sessions. The main reason for this is because I haven't really been exposed to pair programming in my previous experiences. Also, I've always preferred to work on my own.
            </p>
-           <a href="c5-feedback.html"  class="readmore">Read More </a>
+           <p><a class="btn btn-default" href="c5-feedback.html" role="button">Read More &raquo;</a></p>
           </div>
 
 
@@ -89,7 +135,7 @@
            <p>
             In a previous post, I talked a bit about Ruby Classes and how important Objected Oriented Programming is. I also mentioned that OOP is useful for grouping items with similar behavior together in one class. The importance of OOP cannot be overstated.
            </p>
-           <a href="t6-oop-concepts.html"  class="readmore">Read More </a>
+          <p><a class="btn btn-default" href="t6-oop-concepts.html" role="button">Read More &raquo;</a></p>
           </div>
 
 
@@ -100,7 +146,7 @@
            <p>
             According to Dr. Claude M. Steele, A social psychologist who has been doing research on the topic for over 20 years, Stereotype Threat is being in a situation or doing something for which a negative stereotype about one of your identities could be applied to you.
            </p>
-           <a href="c6-stereotype-threat.html"  class="readmore">Read More </a>
+           <p><a class="btn btn-default" href="c6-stereotype-threat.html" role="button">Read More &raquo;</a></p>
           </div>
 
 
@@ -110,7 +156,7 @@
            <p>
              This week, we changed gears and started learning Javascript(JS). JS is the language of the web. It is built into all major web browsers and can be used to make websites interactive. In this post, I will be comparing of few features of Javascript with the Features in Ruby.
            </p>
-           <a href="t7-JavaScript.html"  class="readmore">Read More </a>
+           <p><a class="btn btn-default" href="t7-JavaScript.html" role="button">Read More &raquo;</a></p>
           </div>
 
 
@@ -120,7 +166,7 @@
            <p>
              This post is about recognizing important values. After looking at a list of different values, the ones which I consider important are accomplishment, achievement, ambition, personal development, challenge, having a family, knowledge, peace, and wisdom.
            </p>
-           <a href="c7-values.html"  class="readmore">Read More </a>
+           <p><a class="btn btn-default" href="c7-values.html" role="button">Read More &raquo;</a></p>
           </div>
 
 
@@ -130,7 +176,7 @@
            <p>
              Recursion is a programming technique whereby a method calls itself. It turns out that this is a very useful technique even though it may seem counter-intuitive at first. How can a method call itself? Does this mean that the call to itself also calls it self?
            </p>
-           <a href="t8-tech.html"  class="readmore">Read More </a>
+           <p><a class="btn btn-default" href="t8-tech.html" role="button">Read More &raquo;</a></p>
           </div>
 
 
@@ -140,10 +186,15 @@
            <p>
              Conflict, conflict, conflict... No one wants to deal with conflict. From my understanding, conflict is basically a situation that arises when some things do not go as planned or expected. We all try to avoid conflict as much as possible.
            </p>
-           <a href="c8-conflict.html"  class="readmore">Read More </a>
+           <p><a class="btn btn-default" href="c8-conflich.html" role="button">Read More &raquo;</a></p>
           </div>
 
-      </div>
+          </div>
+          <div class="col-sm-2"></div>
+        </div><!-- row -->
+
+
+      </div> <!-- container -->
 
 
 <!-- <footer>
