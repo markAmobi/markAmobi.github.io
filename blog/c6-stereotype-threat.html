@@ -2,27 +2,64 @@
 <head>
   <title>Stereotype Threat</title>
   <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
-  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
-</head>
+  <!-- Bootstrap 3 is mobile-first. Use this to ensure proper rendering and touch zooming -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+</head>
 <body>
 
-       <ul id="navbar">
-        <li class="nav"> <a href="../index.html">HOME</a> </li>
-        <li class="nav"> <a href="index.html">BLOG</a> </li>
-        <li class="nav"> <a href="../comingsoon.html">PROJECTS</a> </li>
-        <li class="nav"> <a href="../comingsoon.html">ABOUT ME</a> </li>
-        <li class="nav"> <a href="../comingsoon.html">CONTACT</a></li>
-      </ul>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <!-- <a class="navbar-brand" href="#">WebSiteName</a> -->
+    </div>
 
-  <main>
-  <div id="head">
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="../index.html">HOME</a></li>
+        <li> <a href="index.html">BLOG</a> </li>
+        <li> <a href="#">PROJECTS</a> </li>
+        <li> <a href="#">ABOUT ME</a> </li>
+        <li> <a href="#">CONTACT</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="https://github.com/markAmobi"><span><img class = "logos" src="../imgs/githublogo.png"/></span> Github</a></li>
+        <li><a href="https://twitter.com/mark_amobi"><span><img class = "logos" src="../imgs/twitterlogo.png"/></span> Twitter</a></li>
+        <li><a href="https://www.linkedin.com/in/markamobi"><span><img class = "logos" src="../imgs/linkedinlogo.png"/></span> Linkedin</a></li>
+        <li><a href="https://www.facebook.com/MarkkcAmobi"><span><img class = "logos" src="../imgs/facebooklogo.png"/></span> Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <main class="container-fluid blog-post">
+  <div id="head" style="text-align:center;">
   <h1 > Stereotype Threat </h1>
 
   <h4>May 20, 2015. </h4>
   </div>
 
+
+  <div class="row">
+    <div class= "col-md-2"></div>
+    <div class= "col-md-8" style="background-color:white; border-radius:5px;">
 
   <p>
     In this post, I'm going to talk a bit about Stereotype threat. Before I proceed, I would like to thank DBC for exposing my ignorance by making me research on cultural topics like this which I'm usually ignorant about. Stereotype threat is one such topics. A lot of research has been carried out relating to this issue. According to Dr. Claude M. Steele, A social psychologist who has been doing research on the topic for over 20 years, Stereotype Threat is being in a situation or doing something for which a negative stereotype about one of your identities could be applied to you. Some of these identities are age, sex, race, religion, profession, ethnicity, nationality, etc.
@@ -40,10 +77,19 @@
 
   </p>
 
+
+</div>
+      <div class= "col-md-2"></div>
+  </div>
 </main>
 
-<ul id="pageChange">
+<ul class="pager">
 <li><a href= "t6-oop-concepts.html" id = "previous">Previous</a></li>  <li><a href="t7-JavaScript.html" id = "next">Next</a></li>
 </ul>
+
+
+    <footer class="blog-footer" style="text-align:center;">
+      <p>&copy; Mark Donald Amobi</p>
+    </footer>
 </body>
 </html>

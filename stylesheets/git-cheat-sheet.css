@@ -14,8 +14,8 @@ div.left {
 
     padding:5%;
     margin:4%;
-    width:29%;
-    float:left;
+    /*width:29%;*/
+    /*float:left;*/
     border:5px solid gray;
 }
 
@@ -23,9 +23,9 @@ div.right {
 
     padding:5%;
     margin:4%;
-    width:29%;
-    float:right;
-    padding-bottom:12.5%;
+    /*width:29%;*/
+    /*float:right;*/
+    padding-bottom:7%;
      border:5px solid gray;
 }
 

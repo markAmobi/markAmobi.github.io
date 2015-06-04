@@ -2,9 +2,53 @@
 <head>
 <link type="text/css" rel="stylesheet" href = "../stylesheets/git-cheat-sheet.css" />
 <title> Git Cheat Sheet </title>
-</head>
+  <meta charset="UTF-8">
+  <!-- Bootstrap 3 is mobile-first. Use this to ensure proper rendering and touch zooming -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+</head>
 <body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <!-- <a class="navbar-brand" href="#">WebSiteName</a> -->
+    </div>
+
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="../index.html">HOME</a></li>
+        <li> <a href="index.html">BLOG</a> </li>
+        <li> <a href="#">PROJECTS</a> </li>
+        <li> <a href="#">ABOUT ME</a> </li>
+        <li> <a href="#">CONTACT</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="https://github.com/markAmobi"><span><img class = "logos" src="../imgs/githublogo.png"/></span> Github</a></li>
+        <li><a href="https://twitter.com/mark_amobi"><span><img class = "logos" src="../imgs/twitterlogo.png"/></span> Twitter</a></li>
+        <li><a href="https://www.linkedin.com/in/markamobi"><span><img class = "logos" src="../imgs/linkedinlogo.png"/></span> Linkedin</a></li>
+        <li><a href="https://www.facebook.com/MarkkcAmobi"><span><img class = "logos" src="../imgs/facebooklogo.png"/></span> Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 <header>
       <h1>GitHub: Git Cheat Sheet</h1>
       <p>Git is the open source distributed version control system that
@@ -14,8 +58,8 @@
     </header>
 
 
-    <section>
-     <div class="left">
+    <section class="row container-fluid">
+     <div class="left col-md-5" >
       <article>
         <h2>INSTALL GIT</h2>
         <p>GitHub provides desktop clients that include a graphical user
@@ -131,8 +175,8 @@
         </details>
       </article>
         </div>
-
-      <div class="right">
+        <div class="col-md-2"></div>
+      <div class="right col-md-5">
       <article>
         <h2>REFACTOR FILENAMES</h2>
         <p>Relocate and remove versioned files</p>
@@ -264,7 +308,7 @@
         </div>
     </section>
 
-<ul id="pageChange">
+<ul class="pager">
 <li><a href= "t3-arrays-hashes.html" id = "previous">Previous</a></li>  <li><a href="t4-enumerable-methods.html" id = "next">Next</a></li>
 </ul>
 
@@ -272,6 +316,8 @@
         This information is copied directly from <a href="https://training.github.com/kit/downloads/github -git-cheat-sheet.pdf">GitHub's Training Cheatsheet</a>. <img src="https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/512/github.png" />
     </footer>
   </body>
+
+
     </html>
 
     <!-- MY reflection:

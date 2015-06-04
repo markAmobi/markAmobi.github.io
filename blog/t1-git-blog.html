@@ -1,26 +1,65 @@
 <!DOCTYPE html>
 <head>
-  <title>Technical Blog</title>
+  <title>Git and Github</title>
   <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <meta charset="UTF-8">
+  <!-- Bootstrap 3 is mobile-first. Use this to ensure proper rendering and touch zooming -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
   <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
 </head>
 
 <body>
 
 
-       <ul id="navbar">
-        <li class="nav"> <a href="../index.html">HOME</a> </li>
-        <li class="nav"> <a href="index.html">BLOG</a> </li>
-        <li class="nav"> <a href="../comingsoon.html">PROJECTS</a> </li>
-        <li class="nav"> <a href="../comingsoon.html">ABOUT ME</a> </li>
-        <li class="nav"> <a href="../comingsoon.html">CONTACT</a></li>
-      </ul>
-  <main>
-      <div id="head"><h1>Version Control basics with Git and Github</h1>
-  <h4>April 8, 2015</h4>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <!-- <a class="navbar-brand" href="#">WebSiteName</a> -->
     </div>
-  <section>
+
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="../index.html">HOME</a></li>
+        <li> <a href="index.html">BLOG</a> </li>
+        <li> <a href="#">PROJECTS</a> </li>
+        <li> <a href="#">ABOUT ME</a> </li>
+        <li> <a href="#">CONTACT</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="https://github.com/markAmobi"><span><img class = "logos" src="../imgs/githublogo.png"/></span> Github</a></li>
+        <li><a href="https://twitter.com/mark_amobi"><span><img class = "logos" src="../imgs/twitterlogo.png"/></span> Twitter</a></li>
+        <li><a href="https://www.linkedin.com/in/markamobi"><span><img class = "logos" src="../imgs/linkedinlogo.png"/></span> Linkedin</a></li>
+        <li><a href="https://www.facebook.com/MarkkcAmobi"><span><img class = "logos" src="../imgs/facebooklogo.png"/></span> Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <main class="container-fluid blog-post">
+      <h1 class="blog-post-title" style="text-align:center;">Version Control basics with Git and Github</h1>
+  <p class="blog-post-meta" style="text-align:center;">April 8, 2015</p>
+
+  <div class="row">
+    <div class= "col-md-2"></div>
+    <div class= "col-md-8" style="background-color:white; border-radius:5px;">
     <h3>Version Control</h3>
     <p>
       As the name implies, version control is simply a system of controlling versions of a file. It is simply a way to store memories of different changes to a file so that sometime in the future, these memories can be revisited(or maybe re-lived). For example, say you were writing a 10-page paper. It's possible that you might have different ideas along the way, and then you decide to save seperate copies of your paper so you can always go back and compare your ideas. This is a way of version controlling. This is an important idea because it helps to keep track of the past. The past is important. Several systems of version control have been developed to help make this task easier. <a href="http://git-scm.com/" style="text-decoration:none;"> Git</a> is a very popular one especially among developers. Git is basically an efficient version control system that helps you keep snapshots of different changes made to files in an organized way.
@@ -39,10 +78,18 @@
       Whatever you do, wherever you are, whatever operating system you use, understanding version control will be very useful to you. Moreover, knowing how to use a powerful version control system like Git will be an invaluable skill to have.
     </p>
       <!-- copy and paste as many sections as you want to add paragraphs -->
-  </section>
+    </div>
+      <div class= "col-md-2"></div>
+  </div>
 </main>
-<ul id="pageChange">
+<ul class="pager">
 <li><a href= "#" id = "previous">Previous</a></li>  <li><a href="c1-chefs-kitchen.html" id = "next">Next</a></li>
 </ul>
+
+
+
+    <footer class="blog-footer" style="text-align:center;">
+      <p>&copy; Mark Donald Amobi</p>
+    </footer>
 </body>
 </html>
