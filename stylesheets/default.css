@@ -10,3 +10,7 @@ body {
 p {
   font-size:15px;
 }
+
+.footer {
+  display:none; /*Until I figure out how to keep footer fixed at bottom without using fixed*/
+}
