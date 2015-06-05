@@ -3,6 +3,7 @@ body {
   height:100%;
   background-image: url("../imgs/bg/light-grey2.jpg");
   background-repeat: repeat-x repeat-y;
+  padding-top: 70px; /*needed for fixed navbar*/
 }
 body {
   background-color:#EBEBED;
